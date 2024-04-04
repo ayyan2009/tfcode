@@ -13,7 +13,7 @@ provider "docker" {
 
 # Pulls the image
 resource "docker_image" "nginx" {
-  name = "tomee_latest"
+  name = "tomee:latest"
 }
 
 # Create a container
