@@ -13,11 +13,11 @@ provider "docker" {
 
 # Pulls the image
 resource "docker_image" "nginx" {
-  name = "nginx:alpine"
+  name = "tomee_latest"
 }
 
 # Create a container
-resource "docker_container" "foo" {
+resource "docker_container" "bar" {
   image = docker_image.nginx.latest
-  name  = "alpine"
+  name  = "bar"
 }
